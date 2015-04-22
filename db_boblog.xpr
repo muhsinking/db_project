@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="12.2">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="db_boblog.xpr">
+        <folder name="php">
+            <file name="AddStudent.php"/>
+            <file name="DeleteStudent.php"/>
+            <file name="Students.php"/>
+            <file name="UpdateStudent1.php"/>
+            <file name="UpdateStudent2.php"/>
+        </folder>
+    </projectTree>
+</project>
