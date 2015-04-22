@@ -18,5 +18,4 @@
         echo "Database ist kaput.\n";
     }
 
-
 ?>

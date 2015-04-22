@@ -6,8 +6,14 @@
     </meta>
     <projectTree name="db_boblog.xpr">
         <folder name="php">
+            <file name="AddPost.php"/>
             <file name="AddStudent.php"/>
+            <file name="DeletePost.php"/>
             <file name="DeleteStudent.php"/>
+            <file name="EditPost1.php"/>
+            <file name="EditPost2.php"/>
+            <file name="Posts.php"/>
+            <file name="README.md"/>
             <file name="Students.php"/>
             <file name="UpdateStudent1.php"/>
             <file name="UpdateStudent2.php"/>
