@@ -12,7 +12,7 @@
                 echo "<table border=\"1\">\n";
                 echo "  <tr><th>ID</th><th>Title</th><th>Content/th></tr>\n";
                 for($i = 0; $i < $num_rows; $i++) {
-                    $Post = mysqli_fetch_assoc($query);
+                    $post = mysqli_fetch_assoc($query);
                     
                     $Number = $post['Number'];
                     $Title = $post['Title'];
@@ -20,7 +20,7 @@
                     
                     echo "<tr><td>$ID</td><td>$Title</td><td>";
                     echo "$Content</td><td><a href=\"DeletePost.php?ID=$ID\">Delete</a></td>";
-                    echo "<td><a href=\"UpdatePost1.php?ID=$ID&Title=$Title&Content=$Content\">Update</a></tr>\n";
+                    echo "<td><a href=\"EditPost1.php?ID=$ID&Title=$Title&Content=$Content\">Edit</a></tr>\n";
                 }                
                 echo "</table><br/>\n";
                 echo "<h3>Add Post</h3>\n";

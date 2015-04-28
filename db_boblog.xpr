@@ -7,6 +7,7 @@
     <projectTree name="db_boblog.xpr">
         <folder name="php">
             <file name="AddPost.php"/>
+            <file name="Comments.php"/>
             <file name="DeletePost.php"/>
             <file name="EditPost1.php"/>
             <file name="EditPost2.php"/>
