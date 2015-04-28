@@ -20,7 +20,7 @@
                     
                     echo "<tr><td>$Number</td><td>$Title</td>";
                     echo "<td>$Content</td>";
-                    echo "<td><a href=\"Comments.php?ID=$Post\">Comments</a></td>";
+                    echo "<td><a href=\"Comments.php?ID=$Number\">Comments</a></td>";
                     echo "<td><a href=\"DeletePost.php?ID=$Number\">Delete</a></td>";
                     echo "<td><a href=\"EditPost1.php?Number=$Number&Title=$Title&Content=$Content\"> Edit </a></tr>\n";
                 }                

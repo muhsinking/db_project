@@ -6,6 +6,7 @@
     </meta>
     <projectTree name="db_boblog.xpr">
         <folder name="php">
+            <file name="AddComment.php"/>
             <file name="AddPost.php"/>
             <file name="Comments.php"/>
             <file name="DeleteComment.php"/>

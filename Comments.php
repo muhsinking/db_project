@@ -20,12 +20,13 @@
                     $Content = $comment['Content'];
                     
                     echo "<tr><td>$Email</td><td>";
-                    echo "$Content</td><td><a href=\"DeleteComment.php?ID=$Number\">Delete</a></td>";
+                    echo "$Content</td><td><a href=\"DeleteComment.php?ID=$Number&Parent=$ID\">Delete</a></td>";
                     echo "<td><a href=\"EditComment1.php?Number=$Number&Email=$Email&Content=$Content\">Edit</a></tr>\n";
                 }                
                 echo "</table><br/>\n";
                 echo "<h3>Add Comment</h3>\n";
                 echo "<form action=\"AddComment.php\" method=\"get\">\n";
+                echo "<input type=\"hidden\" name=\"Parent\" value=\"$ID\"\>";
                 echo "  <table>\n";
                 echo "    <tr><th>Email:</th><td><input type=\"text\" name=\"Email\"/></td></tr>\n";
                 echo "    <tr><th>Your Comment:</th><td><input type=\"text\" name=\"Content\"/></td></tr>\n";
