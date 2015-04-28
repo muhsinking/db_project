@@ -44,3 +44,5 @@
         mysqli_close($db);
     } else {
         echo "Not Connected to Database.";
+    }
+?>
