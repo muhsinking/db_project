@@ -5,10 +5,11 @@
     
     if ($db) {
         $sql = "DELETE FROM Posts WHERE Number = '$Number'";
-        
         $query = mysqli_query($db, $sql);
+        $sql2 = "DELETE FROM Comments WHERE Post = '$Number'";
+        $query2 = mysqli_query($db, $sql2);
         
-        if ($query) {
+        if ($query and $query2) {
             header("Location: Posts.php");
         
         } else {
