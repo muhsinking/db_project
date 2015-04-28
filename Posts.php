@@ -12,28 +12,28 @@
                 echo "<table border=\"1\">\n";
                 echo "  <tr><th>ID</th><th>Title</th><th>Content/th></tr>\n";
                 for($i = 0; $i < $num_rows; $i++) {
-                    $student = mysqli_fetch_assoc($query);
+                    $Post = mysqli_fetch_assoc($query);
                     
                     $Number = $post['Number'];
                     $Title = $post['Title'];
                     $Content = $post['Content'];
                     
                     echo "<tr><td>$ID</td><td>$Title</td><td>";
-                    echo "$Content</td><td><a href=\"DeleteStudent.php?ID=$ID\">Delete</a></td>";
-                    echo "<td><a href=\"UpdateStudent1.php?ID=$ID&Title=$Title&Content=$Content\">Update</a></tr>\n";
+                    echo "$Content</td><td><a href=\"DeletePost.php?ID=$ID\">Delete</a></td>";
+                    echo "<td><a href=\"UpdatePost1.php?ID=$ID&Title=$Title&Content=$Content\">Update</a></tr>\n";
                 }                
                 echo "</table><br/>\n";
-                echo "<h3>Add Student</h3>\n";
-                echo "<form action=\"AddStudent.php\" method=\"get\">\n";
+                echo "<h3>Add Post</h3>\n";
+                echo "<form action=\"AddPost.php\" method=\"get\">\n";
                 echo "  <table>\n";
                 echo "    <tr><th>First Name:</th><td><input type=\"text\" name=\"Title\"/></td></tr>\n";
                 echo "    <tr><th>Last Name:</th><td><input type=\"text\" name=\"Content\"/></td></tr>\n";
                 echo "  </table>\n";
-                echo "<input type=\"submit\" name=\"submit\" value=\"Add Student\"/>";
+                echo "<input type=\"submit\" name=\"submit\" value=\"Add Post\"/>";
                 echo "</form>\n";
                 
             } else {
-                echo "The Students table is empty.<br/>\n";
+                echo "The Posts table is empty.<br/>\n";
             }
         } else {
             echo "Sorry, the query is not well formed.";
