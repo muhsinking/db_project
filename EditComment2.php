@@ -1,18 +1,19 @@
 <?php
-    $Number= $_REQUEST['Number'];
-    $Title = $_REQUEST['Title'];
+    $Parent = $_REQUEST['Parent'];
+    $Number = $_REQUEST['Number'];
+    $Email = $_REQUEST['Email'];
     $Content = $_REQUEST['Content'];
 
     $db = mysqli_connect("localhost","mcgrail_group5","f1v3@l1v3","mcgrail_group5");
 
     
     if ($db) {
-        $sql = "UPDATE Posts SET Title = '$Title', Content = '$Content' WHERE ID = '$ID'";
+        $sql = "UPDATE Comments SET Email = '$Email', Content = '$Content' WHERE Number = '$Number'";
         
         $query = mysqli_query($db, $sql);
         
         if ($query) {
-            header("Location: Posts.php");
+            header("Location: Comments.php?ID=$Parent");
         
         } else {
             echo "Broken Query!\n";

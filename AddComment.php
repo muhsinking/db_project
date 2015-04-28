@@ -1,5 +1,5 @@
 <?php
-    $Parent = intval($_REQUEST['Parent']);
+    $Parent = $_REQUEST['Parent'];
     $Email = $_REQUEST['Email'];
     $Content = $_REQUEST['Content'];
     $db = mysqli_connect("localhost","mcgrail_group5","f1v3@l1v3","mcgrail_group5");

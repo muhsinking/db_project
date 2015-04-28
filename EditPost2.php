@@ -7,7 +7,7 @@
 
     
     if ($db) {
-        $sql = "UPDATE Posts SET Title = '$Title', Content = '$Content' WHERE ID = '$ID'";
+        $sql = "UPDATE Posts SET Title = '$Title', Content = '$Content' WHERE Number = '$Number'";
         
         $query = mysqli_query($db, $sql);
         

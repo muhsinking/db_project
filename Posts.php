@@ -2,7 +2,7 @@
     $db = mysqli_connect("localhost","mcgrail_group5","f1v3@l1v3","mcgrail_group5");
     
     if ($db) {
-        $sql = "SELECT * FROM Posts ORDER BY Title, Content";
+        $sql = "SELECT * FROM Posts ORDER BY Number DESC";
         $query = mysqli_query($db,$sql);
         
         if ($query) {
@@ -10,7 +10,7 @@
             
             if($num_rows > 0) {
                 echo "<table border=\"1\">\n";
-                echo "  <tr><th>Number</th><th>Title</th><th>Content</th></tr>\n";
+                echo "  <tr><th>Title</th><th>Content</th></tr>\n";
                 for($i = 0; $i < $num_rows; $i++) {
                     $post = mysqli_fetch_assoc($query);
                     
@@ -18,9 +18,9 @@
                     $Title = $post['Title'];
                     $Content = $post['Content'];
                     
-                    echo "<tr><td>$Number</td><td>$Title</td>";
+                    echo "<tr><td>$Title</td>";
                     echo "<td>$Content</td>";
-                    echo "<td><a href=\"Comments.php?ID=$Number\">Comments</a></td>";
+                    echo "<td><a href=\"Comments.php?ID=$Number&Title=$Title&Content=$Content\">Comments</a></td>";
                     echo "<td><a href=\"DeletePost.php?ID=$Number\">Delete</a></td>";
                     echo "<td><a href=\"EditPost1.php?Number=$Number&Title=$Title&Content=$Content\"> Edit </a></tr>\n";
                 }                

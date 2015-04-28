@@ -1,9 +1,14 @@
 <?php 
     $db = mysqli_connect("localhost","mcgrail_group5","f1v3@l1v3","mcgrail_group5");
     $ID = $_REQUEST['ID'];
-    
+    $Title = $_REQUEST['Title'];
+    $Content = $_REQUEST['Content'];
+
+    echo "<h3>$Title</h3>";
+    echo "$Content";
+
     if ($db) {
-        $sql = "SELECT Email, Content, Number FROM Comments WHERE Post = '$ID' ORDER BY Number";
+        $sql = "SELECT Email, Content, Number FROM Comments WHERE Post = '$ID' ORDER BY Number DESC";
         $query = mysqli_query($db,$sql);
         
         if ($query) {
@@ -20,23 +25,22 @@
                     $Content = $comment['Content'];
                     
                     echo "<tr><td>$Email</td><td>";
-                    echo "$Content</td><td><a href=\"DeleteComment.php?ID=$Number&Parent=$ID\">Delete</a></td>";
-                    echo "<td><a href=\"EditComment1.php?Number=$Number&Email=$Email&Content=$Content\">Edit</a></tr>\n";
+                    echo "$Content</td><td><a href=\"DeleteComment.php?Parent=$ID&ID=$Number\">Delete</a></td>";
+                    echo "<td><a href=\"EditComment1.php?Parent=$ID&ID=$Number&Email=$Email&Content=$Content\">Edit</a></tr>\n";
                 }                
-                echo "</table><br/>\n";
-                echo "<h3>Add Comment</h3>\n";
-                echo "<form action=\"AddComment.php\" method=\"get\">\n";
-                echo "<input type=\"hidden\" name=\"Parent\" value=\"$ID\"\>";
-                echo "  <table>\n";
-                echo "    <tr><th>Email:</th><td><input type=\"text\" name=\"Email\"/></td></tr>\n";
-                echo "    <tr><th>Your Comment:</th><td><input type=\"text\" name=\"Content\"/></td></tr>\n";
-                echo "  </table>\n";
-                echo "<input type=\"submit\" name=\"submit\" value=\"Add Comment\"/>";
-                echo "</form>\n";
-                
             } else {
-                echo "The Comments table is empty.<br/>\n";
+                echo "No comments yet!<br/>\n";
             }
+            echo "</table><br/>\n";
+            echo "<h3>Add Comment</h3>\n";
+            echo "<form action=\"AddComment.php\" method=\"get\">\n";
+            echo "<input type=\"hidden\" name=\"Parent\" value=\"$ID\"\>";
+            echo "  <table>\n";
+            echo "    <tr><th>Email:</th><td><input type=\"text\" name=\"Email\"/></td></tr>\n";
+            echo "    <tr><th>Your Comment:</th><td><input type=\"text\" name=\"Content\"/></td></tr>\n";
+            echo "  </table>\n";
+            echo "<input type=\"submit\" name=\"submit\" value=\"Add Comment\"/>";
+            echo "</form>\n";
         } else {
             echo "Sorry, the query is not well formed.";
         }
