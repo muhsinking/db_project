@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Comments on title of post</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<script>
+function inputFocus(i){
+    if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
+}
+    
+function inputBlur(i){
+    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+}
+</script>
+    
+<body>
+
+
+    <!-- Page Content -->
+    
+    
+        <div class="container" align = "center" >
+
+            <div class="row">
+
+                <!-- Comments Column -->
+                <div class="col-md-8" align = "left">
+
+
+                    <h1 class="page-header">
+                        Title of post <br>
+                        <a class="btn btn-primary" href="home.html"><span class="glyphicon glyphicon-menu-left"> </span>&nbsp; Return to list</a>
+                        <blockquote style="font-weight:normal;"> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                        </blockquote>
+                    </h1>
+
+
+                    <!-- Comment1 -->
+
+                    <p class="lead">
+                        <a href="index.php">whatever@bard.edu</a>
+                    </p>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <a class="btn btn-primary" href="edit_comment.html">Edit &nbsp; <span class="glyphicon glyphicon-edit"></span></a>
+                    <a class="btn btn-primary" href="#">Delete &nbsp; <span class="glyphicon glyphicon-trash"></span></a>
+
+                    <hr>
+
+                    <!-- Comment 2 -->
+
+                    <p class="lead">
+                        <a href="index.php">whatever@bard.edu</a>
+                    </p>
+
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <a class="btn btn-primary" href="edit_comment.html">Edit &nbsp; <span class="glyphicon glyphicon-edit"></span></a>
+                    <a class="btn btn-primary" href="#">Delete &nbsp; <span class="glyphicon glyphicon-trash"></span></a>
+
+
+                    <hr>
+
+
+                    <div class="form-group">
+                        <textarea name = "Comment" style = "resize:none; color:#888" title = "Comment" class="form-control" rows="5" id="comment" style="color:#888;" onfocus="inputFocus(this)" onblur="inputBlur(this)">Say something about this post!</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="usr" style="color:#888;" value="Email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
+                    </div>
+
+
+                    <a class="btn btn-primary" href="#">Submit &nbsp; <span class="glyphicon glyphicon-ok"></span></a>
+
+
+                    <hr>    
+
+
+            </div>
+            <!-- /.row -->
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; MFK Softworks 2015</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
