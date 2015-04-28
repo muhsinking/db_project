@@ -1,3 +1,19 @@
+
+<html>
+<head>
+<title>MFK Softworks Professional Blog</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script>
+function inputFocus(i){
+    if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
+}
+    
+function inputBlur(i){
+    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+}
+</script>
+</head>
+<body>
 <?php 
     $db = mysqli_connect("localhost","mcgrail_group5","f1v3@l1v3","mcgrail_group5");
     
@@ -9,20 +25,6 @@
             $num_rows = mysqli_num_rows($query);
             
             if($num_rows > 0) {
-                echo "<html>";
-                echo "<head>";
-                echo "  <title>MFK Softworks Professional Blog</title>";
-                echo "  <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">";
-                echo "</head>";
-                echo "<script>";
-                echo "  function inputFocus(i){";
-                echo "      if(i.value==i.defaultValue){ i.value=\"\"; i.style.color=\"#000\"; }";
-                echo "  }";
-                echo "  function inputBlur(i){";
-                echo "      if(i.value==\"\"){ i.value=i.defaultValue; i.style.color=\"#888\"; };";
-                echo "  }";
-                echo "</script>";
-                echo "<body>";
                 echo "  <div class=\"container\">";
                 echo "      <div class=\"row\">";
                 echo "          <div class=\"col-md-8\" style=\"float:none; margin: 0 auto\">";
@@ -73,11 +75,7 @@
 
                 echo "</div>";
                 echo "</div>";
-                echo "</div>";
-
-                echo "</body>";
-                echo "</html>";                
-                
+                echo "</div>";             
             } else {
                 echo "The Posts table is empty.<br/>\n";
             }
@@ -90,3 +88,5 @@
         echo "Not Connected to Database.";
     }
 ?>
+</body>
+</html>

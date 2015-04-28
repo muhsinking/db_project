@@ -24,7 +24,7 @@
     echo "              <h1 class=\"page-header\">";
     echo "                  $Title <br>";
     echo "                  <blockquote style=\"font-weight:normal;\">$PostContent</blockquote>";
-    echo "                  <a class=\"btn btn-primary\" href=\"Posts.php\"><span class=\"glyphicon glyphicon-menu-left\">";
+    echo "                  <a class=\"btn btn-primary\" href=\"index.php\"><span class=\"glyphicon glyphicon-menu-left\">";
     echo "                  </span>&nbsp; Return to list</a>";
     echo "              </h1>";
 
