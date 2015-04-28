@@ -8,7 +8,10 @@
         <folder name="php">
             <file name="AddPost.php"/>
             <file name="Comments.php"/>
+            <file name="DeleteComment.php"/>
             <file name="DeletePost.php"/>
+            <file name="EditComment1.php"/>
+            <file name="EditComment2.php"/>
             <file name="EditPost1.php"/>
             <file name="EditPost2.php"/>
             <file name="Posts.php"/>

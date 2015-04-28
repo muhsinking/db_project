@@ -20,7 +20,7 @@
                     $Content = $comment['Content'];
                     
                     echo "<tr><td>$Email</td><td>";
-                    echo "$Content</td><td><a href=\"DeleteComment.php?ID=$ID\">Delete</a></td>";
+                    echo "$Content</td><td><a href=\"DeleteComment.php?ID=$Number\">Delete</a></td>";
                     echo "<td><a href=\"EditComment1.php?Number=$Number&Email=$Email&Content=$Content\">Edit</a></tr>\n";
                 }                
                 echo "</table><br/>\n";
