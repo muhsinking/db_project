@@ -43,9 +43,3 @@
         mysqli_close($db);
     } else {
         echo "Not Connected to Database.";
-<<<<<<< Updated upstream
-    }
-?>
-=======
-    }
->>>>>>> Stashed changes
