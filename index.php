@@ -50,35 +50,36 @@ function inputBlur(i){
                     // echo "<td><a href=\"DeletePost.php?ID=$Number\">Delete</a></td>";
                     // echo "<td><a href=\"EditPost1.php?Number=$Number&Title=$Title&Content=$Content\"> Edit </a></tr>\n";
                 }  
-
-                echo "<h3>New Post</h3>\n";
-                echo "<form id=\"add_post\" action=\"AddPost.php\" method=\"get\">\n";
-                echo "  <div class=\"form-group\">";
-                echo "    <input type=\"text\" name=\"Title\" class=\"form-control\" id=\"usr\" style=\"color:#888;\" 
-                           value=\"Title\" onfocus=\"inputFocus(this)\" onblur=\"inputBlur(this)\" />";
-                echo "  </div>";
-                echo "  <div class=\"form-group\">";
-                echo "    <textarea name = \"Content\" style = \"resize:none; color:#888\" class=\"form-control\" 
-                           rows=\"5\" id=\"comment\" onfocus=\"inputFocus(this)\" onblur=\"inputBlur(this)\">Say something!</textarea>";
-                echo "  </div>";
-                echo "  <a class=\"btn btn-primary\" type=\"submit\" name=\"submit\" href=\"javascript:{}\" onclick=\"document.getElementById('add_post').submit();\">Submit &nbsp; <span class=\"glyphicon glyphicon-ok\"></span></a>";
-                echo "</form>\n";
-                echo "<hr>";
-
-                echo "<footer>";
-                echo "  <div class=\"row\">";
-                echo "      <div class=\"col-lg-12\">";
-                echo "          <p>Copyright &copy; MFK Softworks 2015</p>";
-                echo "      </div>";
-                echo "  </div>";
-                echo "<footer>";
-
-                echo "</div>";
-                echo "</div>";
-                echo "</div>";             
             } else {
-                echo "The Posts table is empty.<br/>\n";
+                echo "<div style=\"margin-bottom:20px;\">No posts yet!</div>";
             }
+
+            echo "<h3>New Post</h3>\n";
+            echo "<form id=\"add_post\" action=\"AddPost.php\" method=\"get\">\n";
+            echo "  <div class=\"form-group\">";
+            echo "    <input type=\"text\" name=\"Title\" class=\"form-control\" id=\"usr\" style=\"color:#888;\" 
+                       value=\"Title\" onfocus=\"inputFocus(this)\" onblur=\"inputBlur(this)\" />";
+            echo "  </div>";
+            echo "  <div class=\"form-group\">";
+            echo "    <textarea name = \"Content\" style = \"resize:none; color:#888\" class=\"form-control\" 
+                       rows=\"5\" id=\"comment\" onfocus=\"inputFocus(this)\" onblur=\"inputBlur(this)\">Say something!</textarea>";
+            echo "  </div>";
+            echo "  <a class=\"btn btn-primary\" type=\"submit\" name=\"submit\" href=\"javascript:{}\" onclick=\"document.getElementById('add_post').submit();\">Submit &nbsp; <span class=\"glyphicon glyphicon-ok\"></span></a>";
+            echo "</form>\n";
+            echo "<hr>";
+
+            echo "<footer>";
+            echo "  <div class=\"row\">";
+            echo "      <div class=\"col-lg-12\">";
+            echo "          <p>Copyright &copy; MFK Softworks 2015</p>";
+            echo "      </div>";
+            echo "  </div>";
+            echo "<footer>";
+
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";             
+
         } else {
             echo "Sorry, the query is not well formed.";
         }
